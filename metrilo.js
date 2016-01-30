@@ -1,6 +1,8 @@
-observer = new MutationObserver(function(m) {
-  console.log(m[0].addedNodes[0]);
+$('head').find('script').each(function() {
+  console.log($(this));
+  var sadarjanie = $(this);
+  if (sadarjanie[0].innerHTML.indexOf("metrilo") > -1) {
+    console.log(sadarjanie[0].innerHTML);
+    ''
+  }
 })
-observer.observe(document.head, {
-  childList: true
-});
